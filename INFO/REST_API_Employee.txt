@@ -1,0 +1,70 @@
+
+REST API User
+---------------------
+
+Postman для тесту REST API
+https://www.postman.com/
+
+1) Отримання всіх даних
+
+GET
+http://localhost:8080/api/v1/employee
+
+
+2) Створення даних
+
+POST
+http://localhost:8080/api/v1/employee
+
+Налаштування в Postman: Body, raw, JSON.
+Прописуємо при кожному запиті окремо.
+УВАГА. Для ключів, НЕ "first_name", а "firstName".
+Інакше, може бути помилка first_name є null.
+
+
+{
+	"firstName": "Alice",
+	"lastName": "Green",
+	"position": "Bos",
+	"phone": "666 666 666"
+}
+
+
+3) Отримання даних за id
+
+GET
+http://localhost:8080/api/v1/employee/1
+
+
+4) REST-запит на оновлення даних за id
+
+PUT
+http://localhost:8080/api/v1/employee/1
+
+Налаштування в Postman: Body, raw, JSON.
+
+{
+	"lastName": "Green",
+	"position": "Bos"
+}
+
+
+5) Отримання даних за firstName
+
+GET
+http://localhost:8080/api/v1/employee/first-name/Alice
+
+
+
+6) Отримання даних за lastName
+
+GET
+http://localhost:8080/api/v1/employee/last-name/green
+
+
+
+7) Видалення даних за id
+
+DELETE
+http://localhost:8080/api/v1/employee/1
+
